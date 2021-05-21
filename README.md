@@ -16,7 +16,9 @@ Dev setup was done on Docker using [Bitnami Laravel Development Container](https
 ````
 $ git clone https://github.com/sakaljurgis/Address_Book.git
 $ cd Address_Book
+$ cp .env.example .env
 $ docker-compose up
+$ docker-compose exec myapp php artisan key:generate
 ````
 App available in http://localhost:3000 
 
