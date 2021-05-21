@@ -10,6 +10,14 @@ Dev setup was done on Docker using [Bitnami Laravel Development Container](https
 - Possible to share entry with another registered user
 - CRUD for own address book entry
 
+
+### Run
+
+````
+$ docker-compose up
+````
+App available in http://localhost:3000 
+
 ## License
 
 Currently no licence
