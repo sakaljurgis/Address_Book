@@ -20,7 +20,7 @@ $ cp .env.example .env
 $ docker-compose up -d
 $ docker-compose exec myapp php artisan key:generate
 ````
-App available in http://localhost:3000 
+Locally app available in http://localhost:3000
 
 ## License
 
