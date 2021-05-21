@@ -20,7 +20,7 @@ class ContactController extends Controller
     public function one(int $id = null)
     {
         if ($id) {
-            $contact = $this->contactService->search_by_id($id);
+            $contact = $this->contactService->SearchById($id);
             return view('contacts.add_or_edit', ['id' => $id, 'contact' => $contact]);
         }
         return view('contacts.add_or_edit', ['id' => $id]);
@@ -29,7 +29,7 @@ class ContactController extends Controller
     public function createOrUpdate(int $id = null)
     {
         if ($id) {
-            $contact = $this->contactService->search_by_id($id);
+            $contact = $this->contactService->SearchById($id);
         } else {
             $contact = new Contact();
         }
@@ -53,7 +53,7 @@ class ContactController extends Controller
 
     public function delete(int $id)
     {
-        $contact = $this->contactService->search_by_id($id);
+        $contact = $this->contactService->SearchById($id);
         $contact->delete();
         //delete shares
         Share::where('contact_id', $id)->delete();

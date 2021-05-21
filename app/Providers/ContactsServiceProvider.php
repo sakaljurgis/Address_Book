@@ -9,7 +9,7 @@ use Illuminate\Validation\UnauthorizedException;
 
 class ContactsServiceProvider
 {
-    public function search_by_id($contact_id) {
+    public function SearchById(int $contact_id) {
         $contact = Contact::find($contact_id);
         if (!$contact) {
             throw new ModelNotFoundException('Contact not found by ID ' . $contact_id);

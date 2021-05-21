@@ -19,7 +19,7 @@ class ShareController extends Controller
     public function listUsers(int $contact_id)
     {
         //list all users and status if $contact_id is shared with them
-        $contact = $this->contactService->search_by_id($contact_id);
+        $contact = $this->contactService->SearchById($contact_id);
         $users = User::where('id', '<>', Auth::id())->get();
         foreach ($users as &$user) {
             $user->contactShared = false;
@@ -34,7 +34,7 @@ class ShareController extends Controller
 
     public function shareContact(int $contact_id, int $user_id)
     {
-        $contact = $this->contactService->search_by_id($contact_id);
+        $contact = $this->contactService->SearchById($contact_id);
         $user = User::find($user_id);
 
         if (!$user) {

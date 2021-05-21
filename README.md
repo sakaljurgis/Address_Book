@@ -10,11 +10,6 @@ Dev setup was done on Docker using [Bitnami Laravel Development Container](https
 - Possible to share entry with another registered user
 - CRUD for own address book entry
 
-### todo
-
-- At least one unit test
-- At least one feature tes
-
 ## License
 
 Currently no licence
