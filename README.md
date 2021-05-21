@@ -22,6 +22,9 @@ $ docker-compose exec myapp php artisan key:generate
 ````
 Locally app available in http://localhost:3000
 
+#### Test
+`$ docker-compose exec myapp vendor/bin/phpunit`
+
 ## License
 
 Currently no licence
